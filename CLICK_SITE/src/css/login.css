@@ -1,0 +1,148 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --azul: rgb(25, 25, 109);
+    --verde: rgb(58, 184, 146);
+  }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--verde);
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 6px;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 0 30px 0px rgb(94, 94, 94);
+}
+
+form {
+  position: absolute;
+  margin-top: 60px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+.buttonsForm {
+  margin-top: 20px;
+  position: relative;
+  border-radius: 30px;
+  background-color: var(--verde);
+}
+
+.buttonsForm button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding: 10px 29px;
+}
+
+.btnColor {
+  position: absolute;
+  width: 108px;
+  height: 100%;
+  background-color: var(--azul);
+  border-radius: 30px;
+  transition: .4s;
+}
+
+.input-field{
+    margin: 0;
+    padding: 0;
+}
+
+button[type="submit"] {
+  background: var(--azul);
+  color: white;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 0px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button[type="submit"]:hover{
+    background-color: rgb(0, 0, 107);
+    transition: .6s;
+}
+
+#signin {
+    top: 30%;
+  left: 25px;
+}
+
+#signup {
+    top: 25%;
+  left: 450px;
+  bottom: 0%;
+}
+
+i {
+  position: absolute;
+  left: 0;
+  padding: 10px 10px;
+}
+
+#btnSignin{
+    color: white;
+}
+
+#btnSignup{
+    color: rgb(255, 255, 255);
+}
+
+.imagem{
+    width: 70%;
+}
+
+.responsive-img{
+    margin-top: 30px;
+}
+
+.title{
+    font-weight: 600;
+    color: var(--azul);
+    font-size: 15px;
+}
+
+.material-icons{
+    color: var(--azul);
+}
+
+.esqueci{
+    margin-top: 20px;
+    text-align: center;
+}
+.forgot{
+    color: black;
+    font-size: 15px;
+}
+
+.forgot:hover{
+    color: red;
+    transition: .5s;
+}
