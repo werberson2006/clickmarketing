@@ -22,6 +22,8 @@ html, * {
   .nav-wrapper{
     width: 100%;
     background-color: var(--azul);
+    height: 90px;
+    overflow: hidden;
   }
 
 .collapsible{
@@ -46,6 +48,11 @@ html, * {
   color: var(--verde);
 }
 
+.material-icons:hover{
+  color: white;
+  transition: .4s;
+}
+
 .contador{
   padding-left: 100px;
   
@@ -54,4 +61,33 @@ html, * {
 .textContador{
   font-weight: 300;
   font-size: 20px;
+}
+
+.img{
+  text-align: center;
+  padding: 0%;
+  width: 120px;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+.escolha{
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.escolha-text{
+  color: var(--azul);
+  font-size: larger;
+  font-weight: bold;
+}
+
+.categoria{
+
+}
+
+.categoria:hover{
+  color: var(--verde);
+  transition: .4s;
 }

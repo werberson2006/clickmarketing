@@ -25,7 +25,10 @@
     
 <nav>
     <div class="nav-wrapper">
-      <a href="#" class="texto">BEM-VINDO AO CLICK MARKETING!</a>
+      <div class="img">
+        <img class="img" src=<?=URL."/src/img/logo_negativa.png"?>>
+      </div>
+      
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#usuario"></a></li>
         <li><a href="#vendedor"></a></li>
@@ -37,8 +40,8 @@
 
     <div class="container">
       
-    <div>
-      <p>Escolha uma categoria</p>
+    <div class="escolha">
+      <p class="escolha-text">Escolha uma categoria:</p>
     </div>
 
       <ul class="collapsible">
@@ -52,7 +55,8 @@
             $qtdBrinq = mysqli_num_rows($resultado);
           ?>
           <i class="material-icons">child_friendly</i>
-          <p>BRINQUEDOS</p>
+          <p class="categoria">BRINQUEDOS</p>
+          <i class="material-icons">arrow_drop_down</i>
 
           <div class="contador">
             <p class="textContador"><?php echo $qtdBrinq;  ?> loja(s) cadastrada(s)</p>
@@ -78,7 +82,8 @@
             $qtdRoupas = mysqli_num_rows($resultado);
           ?>
           <i class="material-icons">shopping_basket</i>
-          <p>ROUPAS</p>
+          <p class="categoria">ROUPAS</p>
+          <i class="material-icons">arrow_drop_down</i>
 
           <div class="contador">
             <p class="textContador"><?php echo $qtdRoupas;  ?> loja(s) cadastrada(s)</p>
@@ -103,7 +108,8 @@
             $qtdAlimentos = mysqli_num_rows($resultado);
           ?>
           <i class="material-icons">local_bar</i>
-          <p>ALIMENTOS</p>
+          <p class="categoria">ALIMENTOS</p>
+          <i class="material-icons">arrow_drop_down</i>
 
           <div class="contador">
             <p class="textContador"><?php echo $qtdAlimentos;  ?> loja(s) cadastrada(s)</p>
@@ -127,7 +133,8 @@
             $qtdOutros = mysqli_num_rows($resultado);
           ?>
           <i class="material-icons">?</i>
-          <p>OUTROS</p>
+          <p class="categoria">OUTROS</p>
+          <i class="material-icons">arrow_drop_down</i>
 
           <div class="contador">
             <p class="textContador"><?php echo $qtdOutros;  ?> loja(s) cadastrada(s)</p>
