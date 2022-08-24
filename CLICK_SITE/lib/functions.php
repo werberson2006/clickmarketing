@@ -12,12 +12,15 @@
             $total = mysqli_num_rows($result);
 
             if($total > 0){
-                $dados = $user['email_vendedor'];
-                add_recupera($conexao, $dados);
+
+                echo "EMAIL EXISTE";
+
+                //$dados = $user['email_vendedor'];
+                //add_recupera($conexao, $dados);
                 //enviarEmail($conexao, $dados);
                 
             }else {
-                
+                echo "EMAIL NÃO EXISTE";
             }
 
         }

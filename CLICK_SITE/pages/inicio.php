@@ -33,7 +33,7 @@
         <div class="col m6 center">
           <div class="card">
             <div class="card-image">
-              <img class="logo" src="/CLICK_SITE/src/img/LOGO.png">
+              <img class="logo" src=<?=URL."/src/img/LOGO.png"?>>
             </div>
           </div>
 
@@ -52,7 +52,7 @@
             <div class="opcoes">
               <i class="material-icons" style="color: white; font-size: 40px;">person</i>
               <div class="subopcao">
-                <a class="link" href="/CLICK_SITE/pages/home.php">Sou USUÁRIO</a>
+                <a class="link" href="?pagina=home">Sou USUÁRIO</a>
               </div>
             </div>
 

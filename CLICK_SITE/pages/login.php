@@ -63,6 +63,10 @@ include_once("lib/mensagem.php");
         <div class="esqueci">
           <a class="forgot" href="?pagina=recuperar">Esqueci a senha!</a>
         </div>
+
+        <div class="esqueci">
+          <a class="forgot" href="?pagina=inicio">Voltar para a tela de início</a>
+        </div>
       </form>
 
       
