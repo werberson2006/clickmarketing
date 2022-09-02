@@ -11,7 +11,10 @@ if(isset($_SESSION['mensagem_sucesso'])){ ?>
 </script>
 
 <?php
+
 }
+
+unset($_SESSION['mensagem_sucesso']);
 
 if(isset($_SESSION['mensagem_erro'])){ ?>
 
@@ -22,8 +25,7 @@ if(isset($_SESSION['mensagem_erro'])){ ?>
     </script>
     
     <?php
+    
     }
-
-session_unset();
-
+    unset($_SESSION['mensagem_erro']);
 ?>

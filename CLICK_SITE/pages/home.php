@@ -64,11 +64,22 @@
         </div>
 
         <div class="collapsible-body">
-          <?php while($brinquedos = mysqli_fetch_array($resultado)): ?>
-          <div>
-            <?php echo $brinquedos['nome_loja']; ?>
-            
-          </div>
+          <?php while($dados = mysqli_fetch_object($resultado)): ?>
+            <div class="card">
+
+              <div class="card-image" style="max-width: 100%;">
+
+                <?php
+                  echo "<img src='/CLICK_SITE/pages/fotos/".$dados->logo_loja."' alt='Foto de exibição' />";
+                
+                ?>
+              </div>
+
+              <div class="card-content">
+                <span class='card-title' style="font-weight: bold;"><?php echo utf8_encode($dados->nome_loja);?></span>
+
+              </div>
+              </div>
           <?php endwhile; ?>
         </div>
       </li>

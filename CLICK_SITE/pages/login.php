@@ -1,7 +1,6 @@
 <?php 
 
 include_once("lib/includes.php");
-include_once("lib/mensagem.php");
 
 ?>
 
@@ -49,12 +48,12 @@ include_once("lib/mensagem.php");
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">mail</i>
-            <input id="email" name="email" type="email" class="validate" placeholder="Email" maxlength="50">
+            <input id="email" name="email" type="email" class="validate" placeholder="Email" maxlength="50" required>
           </div>
 
           <div class="input-field col s12">
             <i class="material-icons prefix">lock</i>
-            <input id="senha" name="senha" type="password" class="validate" placeholder="Senha" minlength="5" maxlength="6"> 
+            <input id="senha" name="senha" type="password" class="validate" placeholder="Senha" minlength="5" maxlength="6" required> 
           </div>
         </div>
         

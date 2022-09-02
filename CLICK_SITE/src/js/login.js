@@ -1,3 +1,4 @@
+M.AutoInit();
 
 var formSignin = document.querySelector('#signin')
 var formSignup = document.querySelector('#signup')

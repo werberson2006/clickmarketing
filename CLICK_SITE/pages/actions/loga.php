@@ -24,7 +24,7 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
         $_SESSION['senha'] = $vendedor['senha_vendedor'];
 
         $_SESSION['mensagem_sucesso'] = "Login efetuado com sucesso!";
-        header("Location: ?pagina=admin");
+        header("Location: ?pagina=admin/admin");
     }else{
         $_SESSION['mensagem_erro'] = "Email ou senha inválidos! :(";
         header("Location: ?pagina=login");

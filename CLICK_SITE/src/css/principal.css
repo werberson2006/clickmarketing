@@ -83,10 +83,6 @@ html, * {
   font-weight: bold;
 }
 
-.categoria{
-
-}
-
 .categoria:hover{
   color: var(--verde);
   transition: .4s;
