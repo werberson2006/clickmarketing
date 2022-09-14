@@ -1,4 +1,5 @@
-html, * {
+html,
+* {
   margin: 0;
   padding: 0;
 }
@@ -12,35 +13,35 @@ html, * {
   padding: 0 15px;
 }
 .icon-block .material-icons {
-	font-size: inherit;
+  font-size: inherit;
 }
 
-.body{
-  font-family:Arial, Helvetica, sans-serif;
+.body {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: var(--azul);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-.nav-wrapper{
+.nav-wrapper {
   width: 100%;
   background-color: var(--verde);
 }
 
-.texto{
+.texto {
   font-size: 17px;
   padding-left: 20px;
   font-weight: 600;
 }
 
-.card{
+.card {
   margin-top: 60px;
   border-radius: 50px;
   width: 100%;
 }
 
-.card-image{
+.card-image {
   width: 80%;
   align-items: center;
   margin-left: auto;
@@ -50,66 +51,60 @@ html, * {
   padding-bottom: 40px;
 }
 
-.card2{
+.card2 {
   margin-top: 80px;
   padding-bottom: 40px;
   text-align: center;
   align-items: center;
 }
 
-.button{
+.button {
   width: 250px;
   height: 50px;
   border-radius: 50px;
   border: none;
 }
 
-.material-icons{
+.material-icons {
   padding-right: 8px;
 }
 
-.escolha{
+.escolha {
   padding-bottom: 10px;
   color: white;
   font-size: 18px;
 }
 
-
-.link{
-  
+.link {
   cursor: pointer;
   text-align: center;
   font-weight: 800;
   font-size: 20px;
   color: var(--azul);
-  
-  
 }
 
-.opcoes{
+.opcoes {
   display: flex;
   flex-direction: row;
   padding-left: 100px;
   align-items: center;
 }
 
-.subopcao{
+.subopcao {
   width: 70%;
   padding: 5px;
   background-color: white;
   border-radius: 30px;
-  
 }
 
-.texto-escolha{
+.texto-escolha {
   padding-left: 30px;
-
 }
-.link:hover{
+.link:hover {
   color: var(--verde);
 }
 
-.footer{
+.footer {
   margin-top: 47px;
   width: 100%;
   position: relative;
@@ -118,22 +113,21 @@ html, * {
   bottom: 0px;
 }
 
-.texto-rodape{
+.texto-rodape {
   color: white;
   font-size: 20px;
   padding: 15px;
   font-weight: 500;
 }
 
-.texto-card{
+.texto-card {
   color: white;
   text-align: justify;
   margin-top: 40px;
   font-size: 17px;
 }
 
-
-.texto-2{
+.texto-2 {
   font-weight: 700;
   color: white;
   text-align: left;

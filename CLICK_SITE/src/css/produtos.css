@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: #fff;
+}
+
+header {
+  background-color: #010077;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+.logo {
+  margin: 20px;
+  background-color: azure;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin: 5px;
+  height: 50px;
+  width: 50;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerRight {
+  margin-right: 30px;
+  align-self: center;
+}
+
+.text {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.page {
+  font-weight: 600;
+  padding: 0 20px;
+  background-color: #fff;
+  color: #010077;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 24px 0 24px;
+}
+
+.card {
+  margin: 30px;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #ccc;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+
+.img {
+  text-align: center;
+}
+
+.nome {
+  padding: 10px;
+  color: #010077;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 22px;
+  padding: 0 10px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 800;
+  color: #010077;
+  padding: 0 10px;
+}
+
+.card img {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 1300px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 24px 0 24px;
+  }
+}
+@media (max-width: 1000px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 24px 0 24px;
+  }
+}
+@media (max-width: 680px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 24px 0 24px;
+  }
+}

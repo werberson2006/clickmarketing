@@ -5,7 +5,7 @@ session_start();
 include_once("lib/includes.php");
 
 
-if(!empty($_POST['email']) && !empty($_POST['senha'])){
+if (!empty($_POST['email']) && !empty($_POST['senha'])) {
     $email = mysqli_real_escape_string($conexao, $_POST['email']);
     $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
     $senha = md5($senha);
@@ -14,8 +14,8 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
     $select = mysqli_query($conexao, $sql);
     $vendedor = mysqli_fetch_assoc($select);
 
-    if(isset($vendedor)){
-        
+    if (isset($vendedor)) {
+
         $_SESSION['logado'] = true;
 
         $_SESSION['id'] = $vendedor['id_vendedor'];
@@ -25,15 +25,11 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
 
         $_SESSION['mensagem_sucesso'] = "Login efetuado com sucesso!";
         header("Location: ?pagina=admin/admin");
-    }else{
+    } else {
         $_SESSION['mensagem_erro'] = "Email ou senha inválidos! :(";
         header("Location: ?pagina=login");
     }
-
-
-}else {
+} else {
     $_SESSION['mensagem_erro'] = "Preencha todos os campos! :(";
     header("Location: ?pagina=login");
 }
-
-?>
