@@ -31,8 +31,8 @@ if (isset($_POST['cadastrar'])) {
 
             move_uploaded_file($imagem["tmp_name"], $caminho_foto);
 
-            $sql = "INSERT INTO produtos (id_loja, nome_produto, descricao_produto, preco_produto, imagem) 
-                    VALUES ('$id_loja', '$nome', '$descricao', '$preco', '$nome_foto') LIMIT 1"; //INSERE NO BANCO DE DADOS
+            $sql = "INSERT INTO produtos (id_loja, nome_produto, descricao_produto, preco_produto, imagem, data_criacao) 
+                    VALUES ('$id_loja', '$nome', '$descricao', '$preco', '$nome_foto', NOW()) LIMIT 1"; //INSERE NO BANCO DE DADOS
             $resultado = mysqli_query($conexao, $sql);
 
             if (mysqli_affected_rows($conexao)) {

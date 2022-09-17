@@ -190,7 +190,7 @@ $dados = mysqli_fetch_assoc($executa)
                             <div class="input-field col s6">
                                 <textarea id="descricao" name="descricao"
                                     placeholder="Digite aqui brevemente a descrição do seu produto..."
-                                    class="materialize-textarea" maxlength="100"></textarea>
+                                    class="materialize-textarea" maxlength="50"></textarea>
                                 <label for="descricao">DESCRIÇÃO</label>
                             </div>
 
@@ -225,8 +225,91 @@ $dados = mysqli_fetch_assoc($executa)
         </div>
 
     </div>
-    <div id="lista" class="col s12">
+    <div id="lista" class="col s9 right" style="padding-right: 90px;">
+        <div class="container">
+            <table class="striped centered">
+                <thead>
+                    <tr>
+                        <th>NOME PRODUTO</th>
+                        <th>DESCRIÇÃO</th>
+                        <th>PREÇO</th>
+                        <th>FOTO</th>
+                        <th>Adicionado em:</th>
+                        <th>Editado em:</th>
 
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM produtos ORDER BY `produtos`.`id_produto` DESC";
+                    $resultado = mysqli_query($conexao, $sql);
+
+                    if (mysqli_num_rows($resultado) > 0) :
+
+
+                        while ($dados = mysqli_fetch_array($resultado)) :
+
+                    ?>
+                    <tr>
+                        <td><?php echo ($dados['nome_produto']); ?></td>
+                        <td><?php echo ($dados['descricao_produto']); ?></td>
+                        <td><?php echo ($dados['preco_produto']); ?></td>
+                        <td><?php if (strlen($dados['imagem']) > 5) {
+                                        echo utf8_encode(substr($dados['imagem'], 0, 8) . "...");
+                                    } ?></td>
+                        </td>
+
+                        <?php $dados['data_criacao'] = implode("/", array_reverse(explode("-", $dados['data_criacao']))); ?>
+                        <td><?php echo utf8_encode($dados['data_criacao']); ?></td>
+
+                        <?php $dados['data_edicao'] = implode("/", array_reverse(explode("-", $dados['data_edicao']))); ?>
+                        <td><?php echo utf8_encode($dados['data_edicao']); ?></td>
+
+                        <td> <a href="?pagina=admin/edit&&id=<?php echo $dados['id_produto']; ?>"
+                                class="btn-floating blue"><i class="material-icons">
+                                    edit</i></a>
+                        </td>
+
+                        <!-- Modal Trigger -->
+                        <td><a class="btn-floating red modal-trigger"
+                                href="#modal1 <?php echo $dados['id_produto']; ?>"><i class="material-icons">
+                                    delete</i></a>
+                        <td>
+
+                            <!-- Modal Structure -->
+                            <div id="modal1 <?php echo $dados['id_produto']; ?>" class="modal">
+                                <div class="modal-content">
+                                    <h1>Opa!</h1>
+                                    <h5>Tem certeza que deseja excluir esse produto?</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <form action="?pagina=admin/delete" method="POST">
+                                        <input type="hidden" name="id" value="<?php echo $dados['id_produto']; ?>">
+                                        <button type="submit" name="btn-deletar" class="btn red">Sim, quero
+                                            excluir!</button>
+                                        <a href="#!"
+                                            class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                                    </form>
+                                </div>
+                            </div>
+                    </tr>
+                    <?php
+                        endwhile;
+                    else : ?>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+
+                    </tr>
+                    <?php
+                    endif;
+                    ?>
+                </tbody>
+            </table>
+        </div>
 
 
     </div>
