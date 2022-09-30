@@ -12,8 +12,9 @@ $id = $_SESSION['id'];
 
 $sql = "SELECT * FROM estabelecimentos WHERE id_vendedor = '$id'"; //SELECIONA O ESTABELECIMENTOS
 $executa = mysqli_query($conexao, $sql);
-$dados = mysqli_fetch_assoc($executa)
+$dados = mysqli_fetch_assoc($executa);
 
+$loja = $dados['id_loja'];
 
 ?>
 
@@ -241,7 +242,7 @@ $dados = mysqli_fetch_assoc($executa)
                 </thead>
                 <tbody>
                     <?php
-                    $sql = "SELECT * FROM produtos ORDER BY `produtos`.`id_produto` DESC";
+                    $sql = "SELECT * FROM produtos WHERE id_loja = '$loja' ORDER BY `produtos`.`id_produto` DESC";
                     $resultado = mysqli_query($conexao, $sql);
 
                     if (mysqli_num_rows($resultado) > 0) :

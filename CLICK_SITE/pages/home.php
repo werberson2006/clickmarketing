@@ -66,9 +66,10 @@ include_once("lib/includes.php");
 
                 <div class="collapsible-body row">
                     <?php while ($dados = mysqli_fetch_object($resultado)) : ?>
-                    <div class="card col s4" style="max-width: 30%; height: 300px; padding: 10px;">
+                    <div class="card col s4"
+                        style="margin-right: 10px; align-items: center; text-align: center; border-radius: 20px;">
 
-                        <div class="card-image" style="max-width: 200px;">
+                        <div class="card-image" style="padding-top: 10px;">
 
 
                             <?php
@@ -81,9 +82,12 @@ include_once("lib/includes.php");
                         <div class="card-content">
                             <span class='card-title'
                                 style="font-weight: bold;"><?php echo utf8_encode($dados->nome_loja); ?></span>
+
+                            <a style="font-weight: bold; "
+                                href="?pagina=produtos&&loja=<?php echo $dados->id_loja ?>">Ver produtos</a>
                         </div>
 
-                        <a href="?pagina=produtos&&loja=<?php echo $dados->id_loja ?>">Ver produtos</a>
+
                         <!-- MANDA O ID DA LOJA ATRAVÉS DA URL -->
                     </div>
 
@@ -108,11 +112,12 @@ include_once("lib/includes.php");
                     </div>
                 </div>
 
-                <div class="collapsible-body">
+                <div class="collapsible-body row">
                     <?php while ($roupas = mysqli_fetch_object($resultado)) : ?>
-                    <div class="card col s4" style="max-width: 30%; height: 300px; padding: 10px;">
+                    <div class="card col s4"
+                        style="margin-right: 10px; align-items: center; text-align: center; border-radius: 20px;">
 
-                        <div class="card-image" style="max-width: 200px;">
+                        <div class="card-image" style="padding-top: 10px;">
 
 
                             <?php
@@ -125,9 +130,12 @@ include_once("lib/includes.php");
                         <div class="card-content">
                             <span class='card-title'
                                 style="font-weight: bold;"><?php echo utf8_encode($roupas->nome_loja); ?></span>
+
+                            <a style="font-weight: bold; "
+                                href="?pagina=produtos&&loja=<?php echo $roupas->id_loja ?>">Ver produtos</a>
                         </div>
 
-                        <a href="?pagina=produtos&&loja=<?php echo $roupas->id_loja ?>">Ver produtos</a>
+
                     </div>
                     <?php endwhile; ?>
                 </div>
@@ -150,11 +158,12 @@ include_once("lib/includes.php");
                     </div>
                 </div>
 
-                <div class="collapsible-body">
+                <div class="collapsible-body row">
                     <?php while ($alimentos = mysqli_fetch_object($resultado)) : ?>
-                    <div class="card col s4" style="max-width: 30%; height: 300px; padding: 10px;">
+                    <div class="card col s4"
+                        style="margin-right: 10px; align-items: center; text-align: center; border-radius: 20px;">
 
-                        <div class="card-image" style="max-width: 200px;">
+                        <div class="card-image" style="padding-top: 10px;">
 
 
                             <?php
@@ -167,9 +176,12 @@ include_once("lib/includes.php");
                         <div class="card-content">
                             <span class='card-title'
                                 style="font-weight: bold;"><?php echo utf8_encode($alimentos->nome_loja); ?></span>
+
+                            <a style="font-weight: bold; "
+                                href="?pagina=produtos&&loja=<?php echo $alimentos->id_loja ?>">Ver produtos</a>
                         </div>
 
-                        <a href="?pagina=produtos&&loja=<?php echo $alimentos->id_loja ?>">Ver produtos</a>
+
                     </div>
                     <?php endwhile; ?>
                 </div>
@@ -191,11 +203,12 @@ include_once("lib/includes.php");
                     </div>
                 </div>
 
-                <div class="collapsible-body">
+                <div class="collapsible-body row">
                     <?php while ($outros = mysqli_fetch_object($resultado)) : ?>
-                    <div class="card col s4" style="max-width: 30%; height: 300px; padding: 10px;">
+                    <div class="card col s4"
+                        style="margin-right: 10px; align-items: center; text-align: center; border-radius: 20px;">
 
-                        <div class="card-image" style="max-width: 200px;">
+                        <div class="card-image" style="padding-top: 10px;">
 
 
                             <?php
@@ -208,9 +221,12 @@ include_once("lib/includes.php");
                         <div class="card-content">
                             <span class='card-title'
                                 style="font-weight: bold;"><?php echo utf8_encode($outros->nome_loja); ?></span>
+
+                            <a style="font-weight: bold; "
+                                href="?pagina=produtos&&loja=<?php echo $outros->id_loja ?>">Ver produtos</a>
                         </div>
 
-                        <a href="?pagina=produtos&&loja=<?php echo $outros->id_loja ?>">Ver produtos</a>
+
                     </div>
                     <?php endwhile; ?>
                 </div>

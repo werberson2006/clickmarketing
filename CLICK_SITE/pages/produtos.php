@@ -12,7 +12,6 @@ $loja = mysqli_fetch_array($resultado);
 $sql2 = "SELECT * FROM produtos WHERE id_loja = '$id'";  //SELECIONA DA TABELA PRODUTOS ONDE O ID LOJA = ID DA URL
 $resultado2 = mysqli_query($conexao, $sql2); ?>
 
-?>
 
 
 <!DOCTYPE html>
